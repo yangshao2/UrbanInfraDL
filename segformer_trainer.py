@@ -139,10 +139,10 @@ def validate_epoch(model, dataloader, criterion, device):
 
 def main():
     # Define paths (adjust these to your system)
-    image_dir = '/media/newhd/yshao/bog/train2025_fourclass/images'
-    label_dir = '/media/newhd/yshao/bog/train2025_fourclass/labels'
-    checkpoint_dir = "/home/yshao/bog"
-    output_dir = '/media/newhd/yshao/bog/predictions'  # For future prediction outputs
+    image_dir = '/home/yshao/UrbanInfraDL/training/images'
+    label_dir = '/home/yshao/UrbanInfraDL/training/labels'
+    checkpoint_dir = "/home/yshao/UrbanInfraDL"
+    #output_dir = '/media/newhd/yshao/bog/predictions'  # For future prediction outputs
 
     os.makedirs(checkpoint_dir, exist_ok=True)
 
