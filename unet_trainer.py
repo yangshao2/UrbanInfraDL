@@ -77,7 +77,7 @@ class UNet(nn.Module):
     """
     U-Net model for semantic segmentation.
     """
-    def __init__(self, in_channels=3, num_classes=3):
+    def __init__(self, in_channels=3, num_classes=4):
         super(UNet, self).__init__()
 
         def conv_block(in_c, out_c):
@@ -214,7 +214,7 @@ def main():
 
     # Model Setup
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    model = UNet(in_channels=3, num_classes=3).to(device)
+    model = UNet(in_channels=3, num_classes=4).to(device)
 
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=0.0001)
